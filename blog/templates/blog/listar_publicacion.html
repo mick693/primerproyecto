@@ -2,7 +2,8 @@
 {% block content %}
         {% for p in publi %}
         <div class="post">
-          <div class="date">{{p.fecha_publicacion}</div>
+          <div class="date">{{p.fecha_publicacion}}</div>
+          <h1><a href="{% url 'blog.views.post_detail' pk=p.pk %}">{{ p.titulo }}</a></h1>
           <h1><a href="">{{p.titulo}}</a></h1>
           <p>{{ p.texto|linebreaksbr }}</p>
         </div>

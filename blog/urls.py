@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns =[
     url(r'^$',views.listar_publicacion),
+    url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail),
 ]
